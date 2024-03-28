@@ -153,4 +153,4 @@ public class login extends HttpServlet {
 //ADD COLUMN `lname` VARCHAR(45) NOT NULL AFTER `fname`,
 //ADD COLUMN `mname` VARCHAR(45) NOT NULL AFTER `lname`,
 //ADD COLUMN `age` VARCHAR(45) NOT NULL AFTER `mname`,
-//ADD COLUMN `study` VARCHAR(45) NOT NULL AFTER `age`;
+//ADD COLUMN `stream` VARCHAR(45) NOT NULL AFTER `age`;
