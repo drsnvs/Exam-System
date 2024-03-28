@@ -45,7 +45,7 @@
                 e.printStackTrace();
             }
         %>
-        <form action="registerStudentServlet" onsubmit="return validation()" method="POST">
+        <form action="#" onsubmit="return validation()" method="POST">
             <table id="table" border="1" align="center" cellspacing="0">
                 <tr>
                     <td id="heading" colspan="2" align="center">Register Student</td>

@@ -71,16 +71,25 @@ public class registerStudentServlet extends HttpServlet {
                     ps.setString(6,age);
                     ps.setString(7,stream);
                     rs = ps.executeUpdate();
+                    response.sendRedirect("insertMessage.jsp");
+                    if (rs == 1) {
+                        out.print("success"); // Send success response
+                    } else {
+                        out.print("failure"); // Send failure response
+                    }
+                    ssn.setAttribute("count", count);
                 }else{
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("<title>Servlet login</title>");            
-                out.println("</head>");
-                out.println("<body>");
-                out.println("<h1>Servlet login at " + count + "</h1>");
-                out.println("</body>");
-                out.println("</html>");
+//                out.println("<!DOCTYPE html>");
+//                out.println("<html>");
+//                out.println("<head>");
+//                out.println("<title>Servlet login</title>");            
+//                out.println("</head>");
+//                out.println("<body>");
+//                out.println("<h1>Servlet login at " + count + "</h1>");
+//                out.println("</body>");
+//                out.println("</html>");
+                ssn.setAttribute("count", count);
+                response.sendRedirect("insertMessage.jsp");
                 }
             }catch(Exception e){
                 e.printStackTrace();
