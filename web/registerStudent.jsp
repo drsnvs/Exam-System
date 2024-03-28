@@ -40,7 +40,9 @@
         <%
             try{
                 HttpSession ssn = request.getSession();
-                ssn.setAttribute("key", ssn.getId());
+                if(!ssn.getId().equals(ssn.getAttribute("key"))){
+                    response.sendRedirect("index.jsp");
+                }
             }catch(Exception e){
                 e.printStackTrace();
             }
