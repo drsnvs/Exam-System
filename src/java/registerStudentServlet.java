@@ -6,10 +6,12 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -31,15 +33,58 @@ public class registerStudentServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet registerStudentServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet registerStudentServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            try{
+                Connection con = null;
+    //                Statement st = null;
+                PreparedStatement ps = null;
+                PreparedStatement pss = null;
+
+                HttpSession ssn = request.getSession();
+                if(!ssn.getId().equals(ssn.getAttribute("key"))){
+                    response.sendRedirect("index.jsp");
+                }
+
+                Class.forName("com.mysql.jdbc.Driver");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/darshan_14","root","");
+                String uname = request.getParameter("uname");
+                String password = request.getParameter("password");
+                String fname = request.getParameter("fname");
+                String mname = request.getParameter("mname");
+                String lname = request.getParameter("lname");
+                String stream = request.getParameter("stream");
+                String age = request.getParameter("age");
+
+                pss = con.prepareStatement("select username from data where username=?");
+                pss.setString(1,uname);
+                ResultSet rss = pss.executeQuery();
+                rss.last();
+                int count = rss.getRow();
+                int rs=0;
+
+                if(!(count==1)){
+                    ps = con.prepareStatement("insert into data (username,password,type,fname,lname,mname,age,stream) values(?,?,'student',?,?,?,?,?)");
+                    ps.setString(1,uname);
+                    ps.setString(2,password);
+                    ps.setString(3,fname);
+                    ps.setString(4,lname);
+                    ps.setString(5,mname);
+                    ps.setString(6,age);
+                    ps.setString(7,stream);
+                    rs = ps.executeUpdate();
+                }else{
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Servlet login</title>");            
+                out.println("</head>");
+                out.println("<body>");
+                out.println("<h1>Servlet login at " + count + "</h1>");
+                out.println("</body>");
+                out.println("</html>");
+                }
+            }catch(Exception e){
+                e.printStackTrace();
+            }
         }
     }
 
