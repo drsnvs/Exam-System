@@ -78,7 +78,7 @@
                         <input type="hidden" name="studentId" value="<%= studentId %>">
                         <table id="table" border="1" align="center" cellspacing="0">
                             <tr>
-                                <td id="heading" colspan="2" align="center">Edit <%= rs.getString("username") %></td>
+                                <td id="heading" colspan="2" align="center">Edit <%= rs.getString("fname") %></td>
                             </tr>
                             <tr>
                                 <th>First Name</th>
@@ -100,10 +100,10 @@
                                 <th>Stream</th>
                                 <td class="center" align="center"><input type="text" name="stream" id="stream" value="<%= rs.getString("stream") %>"></td>
                             </tr>
-                            <tr>
+<!--                            <tr>
                                 <th>Username</th>
                                 <td class="center" align="center"><input type="text" name="uname" id="uname" value="<%= rs.getString("username") %>"></td>
-                            </tr>
+                            </tr>-->
                             <tr>
                                 <th>Password</th>
                                 <td class="center" align="center"><input type="text" name="password" id="password" value="<%= rs.getString("password") %>"></td>
