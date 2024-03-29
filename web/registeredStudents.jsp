@@ -108,7 +108,11 @@
                 </tr>
                 
                     <%
-                        }
+                        }%>
+                        <tr>
+                            <td colspan="9" align="center"><a href="admin.jsp" id="backBtn">Back to Admin</a></td>
+                        </tr><%
+                            
                         }catch(Exception e){
                             e.printStackTrace();
                         }

@@ -119,6 +119,9 @@
                                     <a href="registeredStudents.jsp"><input type="button" id="cancel" value="Cancel"></a>
                                 </td>
                             </tr>
+                            <tr>
+                                <td colspan="2" align="center"><a href="registeredStudents.jsp" id="backBtn">Back to Register</a></td>
+                            </tr>
                         </table>
                     </form>
     <%

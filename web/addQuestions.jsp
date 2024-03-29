@@ -84,6 +84,9 @@
                 <tr>
                     <td align="center" colspan="2"><input id="btn" type="submit" value="Add" name="add" /></td>
                 </tr>
+                <tr>
+                    <td colspan="2" align="center"><a href="admin.jsp" id="backBtn">Back to Admin</a></td>
+                </tr>
             </table>
         </form>
         <script>
