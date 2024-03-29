@@ -24,7 +24,7 @@
                 padding: 7px;
             }
             #table{
-                margin-top: 10%;
+                margin-top: 5%;
                 width: 40%;
             }
             #heading{
@@ -49,18 +49,21 @@
         %>
         
         
-        <form action="#" method="POST">
+<!--        <form action="#" method="POST">-->
             <table id="table" border="1" align="center" cellspacing="0">
                 <tr>
-                    <td id="heading" colspan="6" align="center">Registered Students</td>
+                    <td id="heading" colspan="9" align="center">Register</td>
                 </tr>
                 <tr>
-                    <th>Username</th>
                     <th>First name</th>
                     <th>Middle name</th>
                     <th>Last name</th>
+                    <th>Username</th>
                     <th>Age</th>
                     <th>Stream</th>
+                    <th>Type</th>
+                    <th>Edit</th>
+                    <th>Delete</th>                    
                 </tr>
                 <tr>
                     <%
@@ -88,7 +91,22 @@
                     <td><% out.println(rs.getString("lname")); %></td>
                     <td><% out.println(rs.getString("username")); %></td>
                     <td><% out.println(rs.getString("age")); %></td>
-                    <td><% out.println(rs.getString("stream")); %></td></tr>
+                    <td><% out.println(rs.getString("stream")); %></td>
+                    <td><% out.println(rs.getString("type")); %></td>
+                    <td>
+                    <form action="editStudent.jsp" method="POST">
+                        <input type="hidden" name="studentId" value="<%= rs.getString("username") %>">
+                        <button type="submit">Edit</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="deleteStudent.jsp" method="POST" onsubmit="return confirm('Are you sure you want to delete this student?');">
+                        <input type="hidden" name="studentId" value="<%= rs.getString("username") %>">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+                </tr>
+                
                     <%
                         }
                         }catch(Exception e){
@@ -97,7 +115,7 @@
                     %>
                 
             </table>
-        </form>
+        <!--</form>-->
                     
     </body>
 </html>

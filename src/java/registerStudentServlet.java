@@ -74,6 +74,7 @@ public class registerStudentServlet extends HttpServlet {
 //                    response.sendRedirect("insertMessage.jsp");
                     if (rs == 1) {
                         out.print("success"); // Send success response
+                        response.sendRedirect("registeredStudents.jsp");
                     } else {
                         out.print("failure"); // Send failure response
                     }
