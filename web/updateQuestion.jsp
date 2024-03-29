@@ -39,6 +39,16 @@
     <div id="container">
         <h2>Update Question</h2>
         <%
+            try{
+                HttpSession ssn = request.getSession();
+                if(!ssn.getId().equals(ssn.getAttribute("key"))){
+                    response.sendRedirect("index.jsp");
+                }
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        %>
+        <%
             try {
                 // Retrieve question ID from request
                 String questionId = request.getParameter("questionId");

@@ -57,6 +57,7 @@
                 <td><a href="addQuestions.jsp"><button>Add Questions</button></a></td>
                 <td><a href="displayQuestions.jsp"><button>Display Questions</button></a></td>
             </tr>
+            
         </table>
         
     </body>
