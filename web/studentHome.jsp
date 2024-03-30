@@ -1,5 +1,5 @@
 <%-- 
-    Document   : student
+    Document   : studentHome
     Created on : 28 Mar, 2024, 7:49:01 PM
     Author     : DARSHAN
 --%>
@@ -84,10 +84,10 @@
                 <h3>Question <%= questionCount++ %>:</h3>
                 <p><%= rs.getString("question") %></p>
                 <div class="options">
-                    <label><input type="radio" name="question<%= rs.getString("qid") %>" value="option1"> <%= rs.getString("option1") %></label>
-                    <label><input type="radio" name="question<%= rs.getString("qid") %>" value="option2"> <%= rs.getString("option2") %></label>
-                    <label><input type="radio" name="question<%= rs.getString("qid") %>" value="option3"> <%= rs.getString("option3") %></label>
-                    <label><input type="radio" name="question<%= rs.getString("qid") %>" value="option4"> <%= rs.getString("option4") %></label>
+                    <label><input type="radio" name="<%= rs.getString("qid") %>" value="option1" > <%= rs.getString("option1") %></label>
+                    <label><input type="radio" name="<%= rs.getString("qid") %>" value="option2" > <%= rs.getString("option2") %></label>
+                    <label><input type="radio" name="<%= rs.getString("qid") %>" value="option3" > <%= rs.getString("option3") %></label>
+                    <label><input type="radio" name="<%= rs.getString("qid") %>" value="option4" > <%= rs.getString("option4") %></label>
                 </div>
             </div>
             <% 
