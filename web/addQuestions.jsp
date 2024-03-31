@@ -12,30 +12,77 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Registered Student</title>
         <style>
-            body{
-                font-family: cursive;
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f9f9f9;
+                margin: 0;
+                padding: 0;
             }
-            th,td{
-                marging:10px;
-                padding:10px;
-            }
-            #btn{
-                width:20%;
-                padding: 7px;
-            }
-            #table{
-                margin-top: 2%;
+
+            #container {
                 width: 50%;
+                margin: 50px auto;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+                padding: 20px;
             }
-            #heading{
-                font-size: 40px;
-                padding: 30px;
+
+            h2 {
+                text-align: center;
+                color: #333;
+                margin-bottom: 20px;
             }
-            .center{
-                margin: 100%;
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
             }
-            input{
-                width:100%;
+
+            th, td {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+
+            input[type="text"] {
+                width: calc(100% - 20px);
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                margin-top: 5px;
+            }
+
+            #btn {
+                width: 100%;
+                padding: 10px;
+                border: none;
+                background-color: #4CAF50;
+                color: white;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+                margin-top: 20px;
+            }
+
+            #btn:hover {
+                background-color: #45a049;
+            }
+
+            #backBtn {
+                text-decoration: none;
+                color: #666;
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            #backBtn:hover {
+                color: #333;
             }
         </style>
     </head>
@@ -50,45 +97,43 @@
                 e.printStackTrace();
             }
         %>
-        <form action="#" onsubmit="return validation()" method="POST">
-            <table id="table" border="1" align="center" cellspacing="0">
-                <tr>
-                    <td id="heading" colspan="2" align="center">Add Question</td>
-                </tr>
-                
-                <tr>
-                    <th>Question</th>
-                    <td class="center" align="center"><input type="text" name="question" id="question"/></td>
-                </tr>
-                <tr>
-                    <th>Option 1</th>
-                    <td class="center" align="center"><input type="text" name="o1" id="o1"/></td>
-                </tr>
-                <tr>
-                    <th>Option 2</th>
-                    <td class="center" align="center"><input type="text" name="o2" id="o2"/></td>
-                </tr>
-                <tr>
-                    <th>Option 3</th>
-                    <td class="center" align="center"><input type="text" name="o3" id="o3"/></td>
-                </tr>
-                <tr>
-                    <th>Option 4</th>
-                    <td class="center" align="center"><input type="text" name="o4" id="o4"/></td>
-                </tr>
-                <tr>
-                    <th>Answer</th>
-                    <td class="center" align="center"><input type="text" name="answer" id="answer"/></td>
-                </tr>
-                
-                <tr>
-                    <td align="center" colspan="2"><input id="btn" type="submit" value="Add" name="add" /></td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center"><a href="admin.jsp" id="backBtn">Back to Admin</a></td>
-                </tr>
-            </table>
-        </form>
+        <div id="container">
+            <h2>Add Question</h2>
+            <form action="#" onsubmit="return validation()" method="POST">
+                <table>
+                    <tr>
+                        <th>Question</th>
+                        <td><input type="text" name="question" id="question"/></td>
+                    </tr>
+                    <tr>
+                        <th>Option 1</th>
+                        <td><input type="text" name="o1" id="o1"/></td>
+                    </tr>
+                    <tr>
+                        <th>Option 2</th>
+                        <td><input type="text" name="o2" id="o2"/></td>
+                    </tr>
+                    <tr>
+                        <th>Option 3</th>
+                        <td><input type="text" name="o3" id="o3"/></td>
+                    </tr>
+                    <tr>
+                        <th>Option 4</th>
+                        <td><input type="text" name="o4" id="o4"/></td>
+                    </tr>
+                    <tr>
+                        <th>Answer</th>
+                        <td><input type="text" name="answer" id="answer"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input id="btn" type="submit" value="Add" name="add" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><a href="admin.jsp" id="backBtn">Back to Admin</a></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
         <script>
             function validation(){
 //                var qid = document.getElementById("qid").value;

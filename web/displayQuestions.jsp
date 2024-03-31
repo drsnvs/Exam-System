@@ -10,37 +10,60 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>JSP Page</title>
+    <title>Questions</title>
     <style>
         body {
-            font-family: cursive;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
         th, td {
-            margin: 10px;
             padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
         }
-        #btn {
-            width: 20%;
-            padding: 7px;
+        th {
+            background-color: #f2f2f2;
         }
-        #table {
-            margin-top: 10%;
-            width: 90%;
-        }
-        #heading {
-            font-size: 40px;
-            padding: 30px;
-        }
-        .center {
-            margin: 100%;
-        }
-        #qid {
-            width: 10%;
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
         }
         #updateBtn, #deleteBtn {
             width: 80px;
             padding: 5px;
             margin-right: 5px;
+        }
+        #backBtn {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+            padding: 10px;
+        }
+        #backBtn:hover {
+            color: #333;
         }
     </style>
 </head>
@@ -56,11 +79,9 @@
     }
 %>
 
-<!--<form action="#" method="POST">-->
-    <table id="table" border="1" align="center" cellspacing="0">
-        <tr>
-            <td id="heading" colspan="8" align="center">Questions</td>
-        </tr>
+<div id="container">
+    <h2>Questions</h2>
+    <table>
         <tr>
             <th>Question ID</th>
             <th>Question</th>
@@ -117,6 +138,7 @@
             }
         %>
     </table>
-<!--</form>-->
+</div>
+
 </body>
 </html>

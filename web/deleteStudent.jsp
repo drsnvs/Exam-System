@@ -61,7 +61,7 @@
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/darshan_14", "root", "");
                 
                 // Query to delete student by ID
-                ps = con.prepareStatement("DELETE FROM data WHERE username = ?");
+                ps = con.prepareStatement("DELETE data, result FROM data JOIN result ON data.username = result.username WHERE data.username = ?;");
                 ps.setString(1, studentId);
                 
                 int rowsAffected = ps.executeUpdate();
