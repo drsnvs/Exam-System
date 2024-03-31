@@ -56,7 +56,7 @@
         
         <% 
             try {
-                Connection con = null;
+                Connection con = null; 
                 Statement st = null;
                 PreparedStatement ps = null;
                 Class.forName("com.mysql.jdbc.Driver");
