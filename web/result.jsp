@@ -42,7 +42,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Test Result</h2>
+        <h2>Exam Result</h2>
         
         <% 
             try {
@@ -87,15 +87,15 @@
                 ps.setDouble(3,score);
                 ps.setString(4,uname);
                 res = ps.executeUpdate();
-                out.println(res);
+//                out.println(res);
                 if(res==1){
         %>
-        <div class="result">
+<!--        <div class="result">
             <p>Username: <%= uname %></p>
             <p>Total Questions: <%= totalQuestions %></p>
             <p>Correct Answers: <%= correctAnswers %></p>
             <p>Result: <%= String.format("%.2f", score) %>%</p>
-        </div>
+        </div>-->
         <% 
             }else{%>
         <div class="result">
@@ -124,7 +124,8 @@
                 <p>Username: <%= rs.getString("username") %></p>
                 <p>Total Questions: <%= rs.getInt("total") %></p>
                 <p>Correct Answers: <%= rs.getInt("correct") %></p>
-                <p>Result: <%= String.format("%.2f", rs.getString("result")) %>%</p>
+                <p>Result: <%= String.format("%.2f", rs.getDouble("result")) %>%</p>
+
         </div>
         <%
             }}
