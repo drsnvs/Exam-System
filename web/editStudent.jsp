@@ -76,6 +76,7 @@
     %>
                     <form action="#" onsubmit="return validation()" method="POST">
                         <input type="hidden" name="studentId" value="<%= studentId %>">
+                        <input type="hidden" name="uname" id="uname" value="<%= rs.getString("username") %>">
                         <table id="table" border="1" align="center" cellspacing="0">
                             <tr>
                                 <td id="heading" colspan="2" align="center">Edit <%= rs.getString("fname") %></td>
@@ -100,7 +101,7 @@
                                 <th>Stream</th>
                                 <td class="center" align="center"><input type="text" name="stream" id="stream" value="<%= rs.getString("stream") %>"></td>
                             </tr>
-<!--                            <tr>
+<!--                        <tr>
                                 <th>Username</th>
                                 <td class="center" align="center"><input type="text" name="uname" id="uname" value="<%= rs.getString("username") %>"></td>
                             </tr>-->
