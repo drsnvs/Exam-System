@@ -47,7 +47,7 @@ public class login extends HttpServlet {
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/darshan_14","root","");
                 String uname = request.getParameter("uname");
                 String password = request.getParameter("password");
-                
+//                ssn.setAttribute("uname", uname);
                 ps = con.prepareStatement("select * from data where username=? and password=?");
                 ps.setString(1,uname);
                 ps.setString(2, password);
@@ -73,6 +73,7 @@ public class login extends HttpServlet {
                     if ("admin".equals(userType)) {
                         response.sendRedirect("admin.jsp");
                     } else if ("student".equals(userType)) {
+                        ssn.setAttribute("uname", uname);
                         response.sendRedirect("student.jsp"); 
                     } else {
                         out.println("<script type=\"text/javascript\">");
@@ -165,3 +166,4 @@ public class login extends HttpServlet {
 //  `option4` VARCHAR(45) NOT NULL,
 //  `answer` VARCHAR(45) NOT NULL,
 //  PRIMARY KEY (`qid`));
+

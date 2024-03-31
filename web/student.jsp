@@ -38,6 +38,18 @@
     <div class="container">
         <h2>Ready to start Exam?</h2>
         <form action="studentHome.jsp" method="GET">
+            <p><%
+                try{
+                    HttpSession ssn = request.getSession();
+                    %>
+                    <%
+                        String uname = (String) ssn.getAttribute("uname");
+//                        out.println(uname);
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+                    %>
+            </p>
             <button type="submit" class="start-btn">Start Exam</button>
         </form>
     </div>
