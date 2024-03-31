@@ -73,10 +73,25 @@
                 try {
                     Connection con = null;
                     Statement st = null;
+                    Statement stt = null;
                     Class.forName("com.mysql.jdbc.Driver");
                     con = DriverManager.getConnection("jdbc:mysql://localhost:3306/darshan_14","root","");
                     st = con.createStatement();
                     ResultSet rs = st.executeQuery("select * from question");
+                    
+                    
+                    
+                    stt = con.createStatement();
+                    ResultSet rss = stt.executeQuery("select * from result");
+                    while(rss.next()){
+                        if(rss.getString("username").equals(session.getAttribute("uname"))){
+                            response.sendRedirect("result.jsp");
+                        }
+                    }
+                    
+                    
+                    
+                    
                     int questionCount = 1;
                     while(rs.next()) {
             %>

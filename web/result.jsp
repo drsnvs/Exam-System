@@ -107,6 +107,32 @@
                 e.printStackTrace();
             }
         %>
+        <%
+            try{
+                Connection con = null;
+                Class.forName("com.mysql.jdbc.Driver");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/darshan_14","root","");
+                Statement st = null;
+                st = con.createStatement();
+                ResultSet rs = st.executeQuery("select * from result");
+                while(rs.next()){
+                    if(rs.getString("username").equals(session.getAttribute("uname"))){
+            
+        %>
+        <div class="result">
+            <div class="result">
+                <p>Username: <%= rs.getString("username") %></p>
+                <p>Total Questions: <%= rs.getInt("total") %></p>
+                <p>Correct Answers: <%= rs.getInt("correct") %></p>
+                <p>Result: <%= String.format("%.2f", rs.getString("result")) %>%</p>
+        </div>
+        <%
+            }}
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        %>
+        </div>
     </div>
 </body>
 </html>
