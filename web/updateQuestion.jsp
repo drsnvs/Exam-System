@@ -13,25 +13,55 @@
     <title>Update Question</title>
     <style>
         body {
-            font-family: cursive;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
         }
         #container {
             width: 50%;
-            margin: auto;
-            margin-top: 5%;
+            margin: 5% auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
         }
         label {
             display: block;
             margin-top: 10px;
+            color: #666;
         }
         input[type="text"], textarea {
-            width: 100%;
-            padding: 5px;
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
             margin-top: 5px;
         }
         input[type="submit"] {
+            width: calc(100% - 20px);
             padding: 10px;
             margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        #backBtn {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #666;
         }
     </style>
 </head>
@@ -87,17 +117,13 @@
         </form>
         <script>
         function validation(){
-//                var qid = document.getElementById("qid").value;
             var question = document.getElementById("question").value;
             var o1 = document.getElementById("o1").value;
             var o2 = document.getElementById("o2").value;
             var o3 = document.getElementById("o3").value;
             var o4 = document.getElementById("o4").value;
             var answer = document.getElementById("answer").value;
-//                if(qid == ""){
-//                    alert("Enter Question id");
-//                    return false;
-//                }
+
             if(question == ""){
                 alert("Enter Enter Question");
                 return false;
@@ -130,9 +156,8 @@
                 alert("Option should be a different");
                 return false;
             }
-
         }
-    </script>
+        </script>
         <%
                 } else {
                     out.println("Question not found!");
@@ -141,6 +166,7 @@
                 e.printStackTrace();
             }
         %>
+        <a href="displayQuestions.jsp" id="backBtn">Back to Question Display</a>
     </div>
 </body>
 </html>

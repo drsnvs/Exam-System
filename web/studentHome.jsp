@@ -61,6 +61,9 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        submit-btn:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>

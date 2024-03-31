@@ -67,7 +67,7 @@
         }
 
         button:hover {
-            background-color: #003732; /* Darken button color on hover */
+            background-color: #45a049; /* Darken button color on hover */
         }
     </style>
 </head>

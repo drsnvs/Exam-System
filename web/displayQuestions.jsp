@@ -51,10 +51,17 @@
             border-radius: 4px;
             margin-top: 5px;
         }
-        #updateBtn, #deleteBtn {
-            width: 80px;
-            padding: 5px;
+        .btn {
+            background-color: #004B49;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
             margin-right: 5px;
+        }
+        .btn:hover {
+            background-color: #45a049;
         }
         #backBtn {
             text-decoration: none;
@@ -90,7 +97,8 @@
             <th>Option 3</th>
             <th>Option 4</th>
             <th>Answer</th>
-            <th>Actions</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
         <%
             try{
@@ -120,11 +128,11 @@
             <td>
                 <form action="updateQuestion.jsp" method="POST">
                     <input type="hidden" name="questionId" value="<%= rs.getString("qid") %>">
-                    <button id="updateBtn" type="submit">Update</button>
-                </form>
+                    <button class="btn" type="submit">Update</button>
+                </form></td><td>
                 <form action="deleteQuestion.jsp" method="POST">
                     <input type="hidden" name="questionId" value="<%= rs.getString("qid") %>">
-                    <button id="deleteBtn" type="submit">Delete</button>
+                    <button class="btn" type="submit">Delete</button>
                 </form>
             </td>
         </tr>

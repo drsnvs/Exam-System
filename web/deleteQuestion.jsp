@@ -13,12 +13,18 @@
     <title>Delete Question</title>
     <style>
         body {
-            font-family: cursive;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
         }
         #container {
             width: 50%;
-            margin: auto;
-            margin-top: 5%;
+            margin: 5% auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            padding: 20px;
             text-align: center;
         }
         #message {
@@ -30,6 +36,14 @@
         #backBtn {
             padding: 10px 20px;
             margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #004B49; /* Blue color */
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        #backBtn:hover {
+            background-color: #45a049; /* Darker blue color on hover */
         }
     </style>
 </head>

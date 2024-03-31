@@ -32,6 +32,9 @@
             cursor: pointer;
             font-size: 18px;
         }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
