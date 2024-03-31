@@ -38,6 +38,15 @@
             margin: 10px 0;
             font-size: 18px;
         }
+        .start-btn {
+            padding: 15px 30px;
+            background-color: #004B49;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
@@ -135,6 +144,7 @@
                 <p>Total Questions: <%= rs.getInt("total") %></p>
                 <p>Correct Answers: <%= rs.getInt("correct") %></p>
                 <p>Result: <%= String.format("%.2f", rs.getDouble("result")) %>%</p>
+                <p><a href="logout.jsp"><button class="start-btn">Log out</button></a></p>
 
         </div>
         <%

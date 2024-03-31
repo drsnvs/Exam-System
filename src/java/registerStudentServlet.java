@@ -86,7 +86,9 @@ public class registerStudentServlet extends HttpServlet {
                 out.println("<title>Servlet login</title>");            
                 out.println("</head>");
                 out.println("<body>");
-                out.println("<h1>Username already taken " + count + "</h1>");
+                out.println("<script>alert('Username already taken');</script>");
+                out.println("<script>window.location.href='registeredStudents.jsp';</script>");
+
                 out.println("</body>");
                 out.println("</html>");
                 ssn.setAttribute("count", count);

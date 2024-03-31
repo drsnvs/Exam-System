@@ -138,6 +138,7 @@
                     alert("Password and Cofirm Password is not same");
                     return false;
                 }
+                
             }
         </script>
     </body>

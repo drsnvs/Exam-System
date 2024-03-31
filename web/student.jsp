@@ -61,7 +61,9 @@
                     %>
             </p>
             <button type="submit" class="start-btn">Start Exam</button>
+            
         </form>
+            <p><a href="logout.jsp"><button class="start-btn">Log out</button></a></p>
     </div>
 </body>
 </html>
