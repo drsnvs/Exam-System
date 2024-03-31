@@ -25,7 +25,7 @@
         }
         .start-btn {
             padding: 15px 30px;
-            background-color: #4CAF50;
+            background-color: #004B49;
             color: #fff;
             border: none;
             border-radius: 5px;

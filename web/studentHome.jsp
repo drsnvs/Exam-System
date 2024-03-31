@@ -55,7 +55,7 @@
         }
         .submit-btn input[type="submit"] {
             padding: 10px 20px;
-            background-color: #4CAF50;
+            background-color: #004B49;
             color: #fff;
             border: none;
             border-radius: 5px;
