@@ -64,6 +64,16 @@
     </style>
 </head>
 <body>
+    <%
+        try{
+            HttpSession ssn = request.getSession();
+            if(!ssn.getId().equals(ssn.getAttribute("key"))){
+                response.sendRedirect("index.jsp");
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    %>
     <div class="container">
         <div class="header">
             <h2>Online Test</h2>

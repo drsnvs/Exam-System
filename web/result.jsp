@@ -41,6 +41,16 @@
     </style>
 </head>
 <body>
+    <%
+        try{
+            HttpSession ssn = request.getSession();
+            if(!ssn.getId().equals(ssn.getAttribute("key"))){
+                response.sendRedirect("index.jsp");
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    %>
     <div class="container">
         <h2>Exam Result</h2>
         
