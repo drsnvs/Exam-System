@@ -61,7 +61,7 @@
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/darshan_14", "root", "");
                 
                 // Query to delete student by ID
-                ps = con.prepareStatement("DELETE FROM data WHERE username = 'jay' AND NOT EXISTS (SELECT 1 FROM result WHERE result.username = ?;");
+                ps = con.prepareStatement("DELETE FROM data WHERE username = 'jay' AND NOT EXISTS (SELECT 1 FROM result WHERE result.username = ?);");
                 ps.setString(1, studentId);
                 
                 int rowsAffected = ps.executeUpdate();
