@@ -71,10 +71,10 @@
                     // Redirect back to registeredStudents.jsp after deletion
                     response.sendRedirect("registeredStudents.jsp");
                 } else {
-                    out.println("<script>alert('Failed to delete student');</script>");
+                    out.println("<script>alert('Failed 1 to delete student');</script>");
                 }
             } catch (Exception e) {
-                out.println("<script>alert('Failed to delete student');</script>");
+                out.println("<script>alert('Failed 2 to delete student');</script>");
                 e.printStackTrace();
             } finally {
                 // Close connections and statements
