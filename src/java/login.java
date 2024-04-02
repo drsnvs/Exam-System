@@ -166,4 +166,3 @@ public class login extends HttpServlet {
 //  `option4` VARCHAR(45) NOT NULL,
 //  `answer` VARCHAR(45) NOT NULL,
 //  PRIMARY KEY (`qid`));
-

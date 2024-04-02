@@ -179,7 +179,6 @@
                     alert("Option should be a different");
                     return false;
                 }
-                
             }
         </script>
     </body>

@@ -19,7 +19,7 @@
         }
 
         #container {
-            width: 600px;
+            width: 700px;
             margin: 100px auto;
             background-color: #fff;
             border-radius: 5px;
@@ -91,9 +91,10 @@ try {
             <td><a href="registeredStudents.jsp"><button>Registered Students</button></a></td>
             <td><a href="addQuestions.jsp"><button>Add Questions</button></a></td>
             <td><a href="displayQuestions.jsp"><button>Display Questions</button></a></td>
+            <td><a href="Studentresults.jsp"><button>Student Results</button></a></td>
         </tr>
         <tr>
-            <td colspan="4"><a href="logout.jsp"><button>Log out</button></a></td>
+            <td colspan="5"><a href="logout.jsp"><button>Log out</button></a></td>
         </tr>
     </table>
 </div>
