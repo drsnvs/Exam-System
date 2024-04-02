@@ -61,21 +61,21 @@
                 Class.forName("com.mysql.jdbc.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/darshan_14", "root", "");
                 int rowsAffected=0;
-                pss = con.prepareStatement("select username from result where username=?");
-                pss.setString(1, studentId);
-                ResultSet rs = pss.executeQuery();
-                rs.next();
-                if(rs.getString("username").equals(studentId)){
-                    ps = con.prepareStatement("delete data,result from data inner join result on data.username = result.username where data.username=? or result.username is null");
-                    ps.setString(1, studentId);
-
-                    rowsAffected = ps.executeUpdate();
-                }else{
+//                pss = con.prepareStatement("select username from result where username=?");
+//                pss.setString(1, studentId);
+//                ResultSet rs = pss.executeQuery();
+//                rs.next();
+//                if(rs.getString("username").equals(studentId)){
+//                    ps = con.prepareStatement("delete data,result from data inner join result on data.username = result.username where data.username=? or result.username is null");
+//                    ps.setString(1, studentId);
+//
+//                    rowsAffected = ps.executeUpdate();
+//                }else{
                     ps = con.prepareStatement("delete from data where username=?;");
                     ps.setString(1, studentId);
 
                     rowsAffected = ps.executeUpdate();
-                }
+//                }
                 
                 // Query to delete student by ID
                 
