@@ -217,7 +217,7 @@
 //        int count = rss.getRow();
 //        int rs=0;
             
-        ps = con.prepareStatement("insert into question (question,option1,option2,option3,option4,answer) values(?,?,?,?,?,?)");
+        ps = con.prepareStatement("insert into question (questions,option1,option2,option3,option4,answer) values(?,?,?,?,?,?)");
         ps.setString(1,question);
         ps.setString(2,o1);
         ps.setString(3,o2);
@@ -229,10 +229,12 @@
         if (rs == 1) {
             if(!(question.equals(""))){
                 out.print("inserted successfully"); // Send success response
+                out.println("<script>alert('Question added successfully');</script>");
                 response.sendRedirect("displayQuestions.jsp");
             }
         } else {
             out.print("inserted unsuccessfully"); // Send failure response
+            out.println("<script>alert('Question added unsuccessfully');</script>");
         }
 //        ssn.setAttribute("count", count);
 //        if(!(count==1)){

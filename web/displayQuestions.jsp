@@ -119,7 +119,7 @@
         %>
         <tr>
             <td><% out.println(rs.getString("qid")); %></td>
-            <td><% out.println(rs.getString("question")); %></td>
+            <td><% out.println(rs.getString("questions")); %></td>
             <td><% out.println(rs.getString("option1")); %></td>
             <td><% out.println(rs.getString("option2")); %></td>
             <td><% out.println(rs.getString("option3")); %></td>

@@ -159,7 +159,7 @@ public class login extends HttpServlet {
 
 //CREATE TABLE `darshan_14`.`question` (
 //  `qid` INT NOT NULL AUTO_INCREMENT,
-//  `question` VARCHAR(45) NOT NULL,
+//  `questions` VARCHAR(45) NOT NULL,
 //  `option1` VARCHAR(255) NOT NULL,
 //  `option2` VARCHAR(45) NOT NULL,
 //  `option3` VARCHAR(45) NOT NULL,
