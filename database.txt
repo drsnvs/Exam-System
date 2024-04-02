@@ -1,0 +1,22 @@
+//CREATE TABLE `darshan_14`.`data` (
+//  `username` VARCHAR(45) NOT NULL,
+//  `password` VARCHAR(45) NOT NULL,
+//  `type` VARCHAR(7) NOT NULL,
+//  PRIMARY KEY (`username`));
+
+//ALTER TABLE `darshan_14`.`data` 
+//ADD COLUMN `fname` VARCHAR(45) NOT NULL AFTER `type`,
+//ADD COLUMN `lname` VARCHAR(45) NOT NULL AFTER `fname`,
+//ADD COLUMN `mname` VARCHAR(45) NOT NULL AFTER `lname`,
+//ADD COLUMN `age` VARCHAR(45) NOT NULL AFTER `mname`,
+//ADD COLUMN `stream` VARCHAR(45) NOT NULL AFTER `age`;
+
+//CREATE TABLE `darshan_14`.`question` (
+//  `qid` INT NOT NULL AUTO_INCREMENT,
+//  `question` VARCHAR(45) NOT NULL,
+//  `option1` VARCHAR(255) NOT NULL,
+//  `option2` VARCHAR(45) NOT NULL,
+//  `option3` VARCHAR(45) NOT NULL,
+//  `option4` VARCHAR(45) NOT NULL,
+//  `answer` VARCHAR(45) NOT NULL,
+//  PRIMARY KEY (`qid`));
