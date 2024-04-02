@@ -228,13 +228,15 @@
 //                    response.sendRedirect("insertMessage.jsp");
         if (rs == 1) {
             if(!(question.equals(""))){
-                out.print("inserted successfully"); // Send success response
                 out.println("<script>alert('Question added successfully');</script>");
+//                out.print("inserted successfully"); // Send success response
+                
                 response.sendRedirect("displayQuestions.jsp");
             }
         } else {
-            out.print("inserted unsuccessfully"); // Send failure response
             out.println("<script>alert('Question added unsuccessfully');</script>");
+//            out.print("inserted unsuccessfully"); // Send failure response
+            
         }
 //        ssn.setAttribute("count", count);
 //        if(!(count==1)){

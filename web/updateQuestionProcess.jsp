@@ -39,7 +39,7 @@
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/darshan_14", "root", "");
 
             // Prepare update query
-            String updateQuery = "UPDATE question SET question=?, option1=?, option2=?, option3=?, option4=?, answer=? WHERE qid=?";
+            String updateQuery = "UPDATE question SET questions=?, option1=?, option2=?, option3=?, option4=?, answer=? WHERE qid=?";
             PreparedStatement ps = con.prepareStatement(updateQuery);
             ps.setString(1, question);
             ps.setString(2, option1);
