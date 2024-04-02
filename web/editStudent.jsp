@@ -134,7 +134,7 @@
                         <input type="hidden" name="studentId" value="<%= studentId %>">
                         <input type="hidden" name="uname" id="uname" value="<%= rs.getString("username") %>">
                         <table>
-<!--                            <tr>
+<!--                        <tr>
                                 <td id="heading" colspan="2" align="center">Edit <%= rs.getString("fname") %></td>
                             </tr>-->
                             <tr>
