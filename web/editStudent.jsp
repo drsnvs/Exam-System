@@ -19,31 +19,85 @@
     <title>Edit Student</title>
     <style>
         body {
-            font-family: cursive;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
         }
+
+        #container {
+            width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
         th, td {
-            margin: 10px;
             padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
         }
-        #btn {
-            width: 20%;
-            padding: 7px;
+
+        th {
+            background-color: #f2f2f2;
         }
-        
-        #table {
-            margin-top: 2%;
-            width: 30%;
+
+        input[type="text"], input[type="password"], input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
         }
-        #heading {
-            font-size: 40px;
-            padding: 30px;
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #004B49;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
         }
-        .center {
-            margin: 100%;
+
+        .btn:hover {
+            background-color: #45a049;
         }
-        #cancel{
-            width: 20%;
-            padding: 7px;
+
+        #backBtn {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+        }
+
+        #backBtn:hover {
+            color: #333;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            text-align: left;
         }
     </style>
 </head>
@@ -74,13 +128,15 @@
                 
                 if (rs.next()) {
     %>
+                <div id="container">
+                    <h2>Edit <%= rs.getString("fname") %></h2>
                     <form action="#" onsubmit="return validation()" method="POST">
                         <input type="hidden" name="studentId" value="<%= studentId %>">
                         <input type="hidden" name="uname" id="uname" value="<%= rs.getString("username") %>">
-                        <table id="table" border="1" align="center" cellspacing="0">
-                            <tr>
+                        <table>
+<!--                            <tr>
                                 <td id="heading" colspan="2" align="center">Edit <%= rs.getString("fname") %></td>
-                            </tr>
+                            </tr>-->
                             <tr>
                                 <th>First Name</th>
                                 <td class="center" align="center"><input type="text" name="fname" id="fname" value="<%= rs.getString("fname") %>"></td>
@@ -115,9 +171,9 @@
                             </tr>
                             <tr>
                                 <td align="center" colspan="2">
-                                    <input id="btn" type="submit" value="Update" name="update">
+                                    <input class="btn" type="submit" value="Update" name="update">
                                     
-                                    <a href="registeredStudents.jsp"><input type="button" id="cancel" value="Cancel"></a>
+                                    <a href="registeredStudents.jsp"><input class="btn" type="button" id="cancel" value="Cancel"></a>
                                 </td>
                             </tr>
                             <tr>
@@ -125,6 +181,7 @@
                             </tr>
                         </table>
                     </form>
+                </div>
     <%
                 } else {
                     out.println("Student not found!");
