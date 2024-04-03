@@ -114,15 +114,10 @@
             <td><% out.println(rs.getString("total")); %></td>
             <td><% out.println(rs.getString("correct")); %></td>
             <td><% out.println(rs.getString("result")); %></td>
+            
             <td>
-                <form action="updateQuestion.jsp" method="POST">
-                    <input type="hidden" name="questionId" value="<%= rs.getString("qid") %>">
-                    <button class="btn" type="submit">Update</button>
-                </form>
-            </td>
-            <td>
-                <form action="deleteQuestion.jsp" method="POST">
-                    <input type="hidden" name="questionId" value="<%= rs.getString("qid") %>">
+                <form action="deleteResult.jsp" method="POST">
+                    <input type="hidden" name="questionId" value="<%= rs.getString("username") %>">
                     <button class="btn" type="submit">Delete</button>
                 </form>
             </td>

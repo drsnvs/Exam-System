@@ -110,7 +110,7 @@
             %>
             <div class="question">
                 <h3>Question <%= questionCount++ %>:</h3>
-                <p><%= rs.getString("question") %></p>
+                <p><%= rs.getString("questions") %></p>
                 <div class="options">
                     <label><input type="radio" name="<%= rs.getString("qid") %>" value="<%= rs.getString("option1") %>" > <%= rs.getString("option1") %></label>
                     <label><input type="radio" name="<%= rs.getString("qid") %>" value="<%= rs.getString("option2") %>" > <%= rs.getString("option2") %></label>
