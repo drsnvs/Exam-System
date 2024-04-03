@@ -93,7 +93,6 @@
                     <th>Total Questions</th>
                     <th>Attemp Questions</th>
                     <th>Result</th>
-                    <th>Update</th>
                     <th>Delete</th>
                 </tr>
         
