@@ -118,7 +118,7 @@
                 while(rs.next()){
         %>
         <tr>
-            <td><% out.println(rs.getString("qid")); %></td>
+            <td><% out.println(rs.getInt("qid")); %></td>
             <td><% out.println(rs.getString("questions")); %></td>
             <td><% out.println(rs.getString("option1")); %></td>
             <td><% out.println(rs.getString("option2")); %></td>

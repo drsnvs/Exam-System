@@ -93,6 +93,8 @@
                     <th>Total Questions</th>
                     <th>Attemp Questions</th>
                     <th>Result</th>
+                    <th>Update</th>
+                    <th>Delete</th>
                 </tr>
         
         <%
@@ -112,13 +114,26 @@
             <td><% out.println(rs.getString("total")); %></td>
             <td><% out.println(rs.getString("correct")); %></td>
             <td><% out.println(rs.getString("result")); %></td>
+            <td>
+                <form action="updateQuestion.jsp" method="POST">
+                    <input type="hidden" name="questionId" value="<%= rs.getString("qid") %>">
+                    <button class="btn" type="submit">Update</button>
+                </form>
+            </td>
+            <td>
+                <form action="deleteQuestion.jsp" method="POST">
+                    <input type="hidden" name="questionId" value="<%= rs.getString("qid") %>">
+                    <button class="btn" type="submit">Delete</button>
+                </form>
+            </td>
+        <tr>
         <%
                 }
             }catch(Exception e){
                 e.printStackTrace();
             }
         %>
-        <tr>
+        
             <td colspan="8" align="center"><a href="admin.jsp" id="backBtn">Back to Admin</a></td>
         </tr>
     </table>
