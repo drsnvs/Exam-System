@@ -77,7 +77,7 @@
             HttpSession ssn = request.getSession();
             ssn.setAttribute("key", ssn.getId());
         }catch(Exception e){
-            e.printStackTrace();
+            e.printStackTrace(); 
         }
     %>
 <div id="container">
