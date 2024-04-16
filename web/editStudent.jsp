@@ -3,12 +3,6 @@
     Created on : 29 Mar, 2024, 8:27:58 PM
     Author     : DARSHAN
 --%>
-
-<%-- 
-    Document   : editStudent
-    Created on : 29 Mar, 2024, 8:27:58 PM
-    Author     : DARSHAN
---%>
  
 <%@ page import="java.sql.*" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
