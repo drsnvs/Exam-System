@@ -13,7 +13,7 @@
     <style>
         body {
             font-family: cursive,Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-color: #f5f5f5; 
             margin: 0;
             padding: 0;
         }
