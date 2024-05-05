@@ -11,7 +11,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Exam System Login</title>
     <style>
-        body {
+        body { 
             font-family: cursive,Arial, sans-serif;
             background-color: #f5f5f5;
             margin: 0;
